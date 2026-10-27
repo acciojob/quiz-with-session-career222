@@ -34,20 +34,16 @@ submitButton.addEventListener("click", function () {
 
   scoreElement.textContent = `Your score is ${score} out of 5.`;
 
-  // Save score in localStorage
+ 
   localStorage.setItem("score", score);
 });
 
-// Show previous score after refresh
 const savedScore = localStorage.getItem("score");
 
 if (savedScore !== null) {
   scoreElement.textContent = `Your score is ${savedScore} out of 5.`;
 }
 
-
-// Do not change code below this line
-// This code will just display the questions to the screen
 const questions = [
   {
     question: "What is the capital of France?",
@@ -76,7 +72,6 @@ const questions = [
   },
 ];
 
-// Display the quiz questions and choices
 function renderQuestions() {
   for (let i = 0; i < questions.length; i++) {
     const question = questions[i];
